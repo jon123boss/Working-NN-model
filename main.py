@@ -5,25 +5,20 @@ input_size = 2
 hidden_count = 10
 hidden_size = 5
 output_count = 1
-learning_rate = 0.01
-
+learning_rate = 0.03
 
 # Activation functions and their derivatives
 def ReLU(x):
     return np.maximum(x, 0)
 
-
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
-
 
 def ReLU_derivative(x):
     return np.where(x > 0, 1, 0)
 
-
 def sigmoid_derivative(x):
     return sigmoid(x) * (1 - sigmoid(x))
-
 
 # Example usage with dummy data
 X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
